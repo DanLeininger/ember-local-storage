@@ -381,6 +381,7 @@ export default Route.extend({
 `options` are:
 - `json` Boolean (default `true`)
 - `truncate` Boolean (default `true`) if `true` the existing data gets replaced.
+- `reload` Boolean (default `true`) if `true` the data gets loaded into the store after import.
 
 **exportData(types, options)**
 
