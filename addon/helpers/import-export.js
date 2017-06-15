@@ -14,7 +14,8 @@ export function importData(store, content, options) {
   // merge defaults
   options = assign({
     json: true,
-    truncate: true
+    truncate: true,
+    reload: true
   }, options || {});
 
   let reloadTypes = [];
@@ -51,9 +52,11 @@ export function importData(store, content, options) {
   return Ember.RSVP.all(promises)
     .then(function() {
       // reload from store
-      reloadTypes.forEach(function(type) {
-        store.findAll(type);
-      });
+      if (options.reload) {
+        reloadTypes.forEach(function(type) {
+          store.findAll(type);
+        });
+      }
     });
 }
 
