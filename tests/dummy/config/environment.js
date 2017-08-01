@@ -1,9 +1,10 @@
 /* eslint-env node */
+'use strict';
 
 module.exports = function(environment) {
-  var ENV = {
+  let ENV = {
     modulePrefix: 'dummy',
-    environment: environment,
+    environment,
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {
@@ -23,7 +24,8 @@ module.exports = function(environment) {
     },
 
     'ember-local-storage': {
-      fileExport: true
+      fileExport: true,
+      // ignoreBlobWarning: true,
     }
   };
 

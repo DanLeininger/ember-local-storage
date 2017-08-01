@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.4.0
+* [FIX] Namespaces storage based on type key if `storageFor`s `model` option is used. Thanks to [@offirgolan](https://github.com/offirgolan) for the PR.
+* [ENHANCEMENT] Moving blob-polyfill dependency from bower to npm. You can remove the bower dependency if its not needed by other code. Thanks to [@gmurphey](https://github.com/gmurphey) for the PR.
+
+## 1.3.7
+* [FIX] `storageFor`s `model` option now supports latest ember-data models. Thanks to [@offirgolan](https://github.com/offirgolan) for the PR.
+
 ## 1.3.6
 * [FIX] Fix broken import/export and decouple the methods from the adapter. Thanks to [@bendemboski](https://github.com/bendemboski) for the PR.
 
